@@ -26,7 +26,7 @@ class AlertView {
         didSet {
             if type == .success {
                 title = "Sucesso"
-                colorPrimary = HexColor.secondary.color
+                colorPrimary = HexColor.primary.color
             } else {
                 title = "Erro"
                 colorPrimary = HexColor.accent.color

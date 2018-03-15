@@ -11,7 +11,6 @@
 		47D0AF31ABE2F568173CB990 /* Pods_Vote_PresidenteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AD1A783CCC129CF0BBE675 /* Pods_Vote_PresidenteTests.framework */; };
 		8B328B32D4E9F9857219C577 /* Pods_Vote_Presidente.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAEA3B03BAF82FA21F24B6 /* Pods_Vote_Presidente.framework */; };
 		EDE7A637205AD03A0093D1C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A636205AD03A0093D1C6 /* AppDelegate.swift */; };
-		EDE7A639205AD03A0093D1C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A638205AD03A0093D1C6 /* ViewController.swift */; };
 		EDE7A63C205AD03A0093D1C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE7A63A205AD03A0093D1C6 /* Main.storyboard */; };
 		EDE7A63E205AD03A0093D1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE7A63D205AD03A0093D1C6 /* Assets.xcassets */; };
 		EDE7A641205AD03A0093D1C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE7A63F205AD03A0093D1C6 /* LaunchScreen.storyboard */; };
@@ -35,6 +34,13 @@
 		EDE7A694205AD04D0093D1C6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A681205AD04D0093D1C6 /* Model.swift */; };
 		EDE7A695205AD04D0093D1C6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A682205AD04D0093D1C6 /* ViewModel.swift */; };
 		EDE7A696205AD04D0093D1C6 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A683205AD04D0093D1C6 /* ServiceModel.swift */; };
+		EDE7A69E205AD1960093D1C6 /* EnvironmentLinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDE7A69C205AD1960093D1C6 /* EnvironmentLinks.plist */; };
+		EDE7A69F205AD1960093D1C6 /* RequestLinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDE7A69D205AD1960093D1C6 /* RequestLinks.plist */; };
+		EDE7A6A1205AD9470093D1C6 /* CandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A6A0205AD9470093D1C6 /* CandidatesView.swift */; };
+		EDE7A6A4205AD9620093D1C6 /* CandidatesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A6A3205AD9620093D1C6 /* CandidatesViewCell.swift */; };
+		EDE7A6A7205AD97A0093D1C6 /* CandidatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A6A6205AD97A0093D1C6 /* CandidatesViewModel.swift */; };
+		EDE7A6AA205AD98A0093D1C6 /* CandidatesServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A6A9205AD98A0093D1C6 /* CandidatesServiceModel.swift */; };
+		EDE7A6AC205ADC0A0093D1C6 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A6AB205ADC0A0093D1C6 /* Candidate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +70,6 @@
 		DC9BA17682299BEFE78D7C7A /* Pods-Vote Presidente.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vote Presidente.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vote Presidente/Pods-Vote Presidente.release.xcconfig"; sourceTree = "<group>"; };
 		EDE7A633205AD03A0093D1C6 /* Vote Presidente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vote Presidente.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE7A636205AD03A0093D1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDE7A638205AD03A0093D1C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDE7A63B205AD03A0093D1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDE7A63D205AD03A0093D1C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE7A640205AD03A0093D1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +99,13 @@
 		EDE7A681205AD04D0093D1C6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EDE7A682205AD04D0093D1C6 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EDE7A683205AD04D0093D1C6 /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		EDE7A69C205AD1960093D1C6 /* EnvironmentLinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnvironmentLinks.plist; sourceTree = "<group>"; };
+		EDE7A69D205AD1960093D1C6 /* RequestLinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RequestLinks.plist; sourceTree = "<group>"; };
+		EDE7A6A0205AD9470093D1C6 /* CandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesView.swift; sourceTree = "<group>"; };
+		EDE7A6A3205AD9620093D1C6 /* CandidatesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesViewCell.swift; sourceTree = "<group>"; };
+		EDE7A6A6205AD97A0093D1C6 /* CandidatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesViewModel.swift; sourceTree = "<group>"; };
+		EDE7A6A9205AD98A0093D1C6 /* CandidatesServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesServiceModel.swift; sourceTree = "<group>"; };
+		EDE7A6AB205ADC0A0093D1C6 /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		F410C5A69E7B13AB55777D40 /* Pods-Vote PresidenteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vote PresidenteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vote PresidenteTests/Pods-Vote PresidenteTests.release.xcconfig"; sourceTree = "<group>"; };
 		F66D789361F98A3FF08B9E23 /* Pods_Vote_PresidenteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vote_PresidenteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,12 +187,15 @@
 			isa = PBXGroup;
 			children = (
 				EDE7A664205AD04D0093D1C6 /* Utils */,
+				EDE7A69A205AD1780093D1C6 /* Model */,
+				EDE7A699205AD1740093D1C6 /* View */,
+				EDE7A698205AD16F0093D1C6 /* ViewModel */,
+				EDE7A697205AD1650093D1C6 /* ServiceModel */,
 				EDE7A636205AD03A0093D1C6 /* AppDelegate.swift */,
-				EDE7A638205AD03A0093D1C6 /* ViewController.swift */,
 				EDE7A63A205AD03A0093D1C6 /* Main.storyboard */,
 				EDE7A63D205AD03A0093D1C6 /* Assets.xcassets */,
 				EDE7A63F205AD03A0093D1C6 /* LaunchScreen.storyboard */,
-				EDE7A642205AD03A0093D1C6 /* Info.plist */,
+				EDE7A69B205AD1820093D1C6 /* Supporting Files */,
 			);
 			path = "Vote Presidente";
 			sourceTree = "<group>";
@@ -301,6 +316,73 @@
 			path = MVVM;
 			sourceTree = "<group>";
 		};
+		EDE7A697205AD1650093D1C6 /* ServiceModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A8205AD97C0093D1C6 /* Candidates */,
+			);
+			path = ServiceModel;
+			sourceTree = "<group>";
+		};
+		EDE7A698205AD16F0093D1C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A5205AD9660093D1C6 /* Candidates */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDE7A699205AD1740093D1C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A2205AD94E0093D1C6 /* Candidates */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDE7A69A205AD1780093D1C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6AB205ADC0A0093D1C6 /* Candidate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDE7A69B205AD1820093D1C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A642205AD03A0093D1C6 /* Info.plist */,
+				EDE7A69C205AD1960093D1C6 /* EnvironmentLinks.plist */,
+				EDE7A69D205AD1960093D1C6 /* RequestLinks.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDE7A6A2205AD94E0093D1C6 /* Candidates */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A0205AD9470093D1C6 /* CandidatesView.swift */,
+				EDE7A6A3205AD9620093D1C6 /* CandidatesViewCell.swift */,
+			);
+			path = Candidates;
+			sourceTree = "<group>";
+		};
+		EDE7A6A5205AD9660093D1C6 /* Candidates */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A6205AD97A0093D1C6 /* CandidatesViewModel.swift */,
+			);
+			path = Candidates;
+			sourceTree = "<group>";
+		};
+		EDE7A6A8205AD97C0093D1C6 /* Candidates */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7A6A9205AD98A0093D1C6 /* CandidatesServiceModel.swift */,
+			);
+			path = Candidates;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,8 +499,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE7A69F205AD1960093D1C6 /* RequestLinks.plist in Resources */,
 				EDE7A641205AD03A0093D1C6 /* LaunchScreen.storyboard in Resources */,
 				EDE7A63E205AD03A0093D1C6 /* Assets.xcassets in Resources */,
+				EDE7A69E205AD1960093D1C6 /* EnvironmentLinks.plist in Resources */,
 				EDE7A63C205AD03A0093D1C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +629,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vote Presidente/Pods-Vote Presidente-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
@@ -555,6 +640,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
@@ -608,24 +694,28 @@
 			files = (
 				EDE7A690205AD04D0093D1C6 /* DateHelper.swift in Sources */,
 				EDE7A693205AD04D0093D1C6 /* Appearance.swift in Sources */,
-				EDE7A639205AD03A0093D1C6 /* ViewController.swift in Sources */,
 				EDE7A68D205AD04D0093D1C6 /* Messages.swift in Sources */,
 				EDE7A696205AD04D0093D1C6 /* ServiceModel.swift in Sources */,
+				EDE7A6A4205AD9620093D1C6 /* CandidatesViewCell.swift in Sources */,
 				EDE7A68C205AD04D0093D1C6 /* Constants.swift in Sources */,
 				EDE7A637205AD03A0093D1C6 /* AppDelegate.swift in Sources */,
 				EDE7A687205AD04D0093D1C6 /* Session.swift in Sources */,
 				EDE7A68A205AD04D0093D1C6 /* General.swift in Sources */,
 				EDE7A689205AD04D0093D1C6 /* EnvironmentHost.swift in Sources */,
+				EDE7A6A1205AD9470093D1C6 /* CandidatesView.swift in Sources */,
 				EDE7A68B205AD04D0093D1C6 /* AlertView.swift in Sources */,
 				EDE7A695205AD04D0093D1C6 /* ViewModel.swift in Sources */,
 				EDE7A688205AD04D0093D1C6 /* FileManager.swift in Sources */,
 				EDE7A692205AD04D0093D1C6 /* TextFieldMasks.swift in Sources */,
+				EDE7A6AC205ADC0A0093D1C6 /* Candidate.swift in Sources */,
 				EDE7A68F205AD04D0093D1C6 /* Date.swift in Sources */,
 				EDE7A691205AD04D0093D1C6 /* Extensions.swift in Sources */,
 				EDE7A686205AD04D0093D1C6 /* Connection.swift in Sources */,
+				EDE7A6A7205AD97A0093D1C6 /* CandidatesViewModel.swift in Sources */,
 				EDE7A694205AD04D0093D1C6 /* Model.swift in Sources */,
 				EDE7A68E205AD04D0093D1C6 /* HexColor.swift in Sources */,
 				EDE7A684205AD04D0093D1C6 /* LoadingView.swift in Sources */,
+				EDE7A6AA205AD98A0093D1C6 /* CandidatesServiceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,7 +884,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXT2XJVDAC;
-				INFOPLIST_FILE = "Vote Presidente/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vote Presidente/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aasmarques.Vote-Presidente";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -810,7 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXT2XJVDAC;
-				INFOPLIST_FILE = "Vote Presidente/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vote Presidente/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aasmarques.Vote-Presidente";
 				PRODUCT_NAME = "$(TARGET_NAME)";

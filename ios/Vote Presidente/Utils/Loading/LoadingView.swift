@@ -43,7 +43,7 @@ class LoadingView : UIView {
         let activityIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 16, width: 40, height: 40), type: .ballClipRotate)
         
         activityIndicator.center = CGPoint(x: self.center.x, y: self.center.y)
-        activityIndicator.color = HexColor.secondary.color
+        activityIndicator.color = HexColor.primary.color
         activityIndicator.startAnimating()
         
         return activityIndicator

@@ -203,7 +203,7 @@ extension UITextField {
                                              target: self,
                                              action: #selector(inputAccessoryViewAction(_:)))
             buttonLeft.tag = 0
-            buttonLeft.tintColor = HexColor.secondary.color
+            buttonLeft.tintColor = HexColor.primary.color
             
             items.append(buttonLeft)
         }
@@ -217,7 +217,7 @@ extension UITextField {
                                                   target: self,
                                                   action: #selector(resignFirstResponder))
                 buttonRight.tag = 1
-                buttonRight.tintColor = HexColor.secondary.color
+                buttonRight.tintColor = HexColor.primary.color
                 
                 items.append(buttonRight)
             } else {
@@ -226,7 +226,7 @@ extension UITextField {
                                                   target: self,
                                                   action: #selector(inputAccessoryViewAction(_:)))
                 buttonRight.tag = 1
-                buttonRight.tintColor = HexColor.secondary.color
+                buttonRight.tintColor = HexColor.primary.color
                 
                 items.append(buttonRight)
             }
@@ -887,6 +887,33 @@ extension Array {
         }
         
         return nil
+    }
+}
+
+extension UIView {
+    @IBInspectable var colorStyle: String? {
+        get {
+            return self.colorStyle
+        }
+        set {
+            if let label = self as? UILabel {
+                label.textColor = HexColor.color(from: newValue) ?? HexColor.text.color
+                return
+            }
+            if let textField = self as? UITextField {
+                textField.textColor = HexColor.color(from: newValue) ?? HexColor.text.color
+                return
+            }
+            if let textView = self as? UITextView {
+                textView.textColor = HexColor.color(from: newValue) ?? HexColor.text.color
+                return
+            }
+            if let button = self as? UIButton {
+                button.setTitleColor(HexColor.secondary.color, for: .normal)
+            }
+            
+            self.backgroundColor = HexColor.color(from: newValue) ?? self.backgroundColor
+        }
     }
 }
 

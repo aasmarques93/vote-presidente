@@ -1,24 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kk6-OT-69w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Vote Presidente-->
+        <scene sceneID="cRB-cF-cC1">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController storyboardIdentifier="CandidatesView" id="eoN-R4-uAb" customClass="CandidatesView" customModule="Vote_Presidente" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="420" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eTt-ys-eDp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="E40-06-clV">
+                            <rect key="frame" x="0.0" y="468" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CandidateCell" rowHeight="440" id="V8I-wC-WD6" customClass="CandidatesViewCell" customModule="Vote_Presidente" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="440"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V8I-wC-WD6" id="Qde-Gr-Nyt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKd-5b-A42">
+                                            <rect key="frame" x="8" y="8" width="359" height="424"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kLp-bY-dIc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="AUd-lB-pOi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Name}}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ba-qf-Xv4">
+                                                    <rect key="frame" x="8" y="258" width="255.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Party}}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5p-3m-u6R">
+                                                    <rect key="frame" x="271" y="258" width="80" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="MKM-N1-ybo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="labelStyle" value="secondary"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="primary"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargo Atual:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-dq-r3X">
+                                                    <rect key="frame" x="8" y="287" width="80" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="z1H-pK-gQJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Current position}}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxy-Uo-gqW">
+                                                    <rect key="frame" x="96" y="287" width="255" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="{{Description}}" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w5d-nn-0fT">
+                                                    <rect key="frame" x="8" y="312" width="343" height="52"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn2-AP-xi1">
+                                                    <rect key="frame" x="8" y="372" width="343" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="paR-FQ-80G"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Votar"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="primary"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1ba-qf-Xv4" firstAttribute="top" secondItem="kLp-bY-dIc" secondAttribute="bottom" constant="8" id="2R6-EM-Ubb"/>
+                                                <constraint firstItem="ZL8-dq-r3X" firstAttribute="leading" secondItem="1ba-qf-Xv4" secondAttribute="leading" id="DEx-lN-y0E"/>
+                                                <constraint firstItem="kLp-bY-dIc" firstAttribute="top" secondItem="cKd-5b-A42" secondAttribute="top" id="FBo-OU-HAM"/>
+                                                <constraint firstItem="w5d-nn-0fT" firstAttribute="leading" secondItem="ZL8-dq-r3X" secondAttribute="leading" id="VFS-Jg-w8o"/>
+                                                <constraint firstItem="Jxy-Uo-gqW" firstAttribute="centerY" secondItem="ZL8-dq-r3X" secondAttribute="centerY" id="WBU-kj-5DB"/>
+                                                <constraint firstItem="fn2-AP-xi1" firstAttribute="top" secondItem="w5d-nn-0fT" secondAttribute="bottom" constant="8" id="WV1-4L-q8t"/>
+                                                <constraint firstItem="u5p-3m-u6R" firstAttribute="leading" secondItem="1ba-qf-Xv4" secondAttribute="trailing" constant="7.5" id="Wjc-W8-z0b"/>
+                                                <constraint firstItem="w5d-nn-0fT" firstAttribute="trailing" secondItem="u5p-3m-u6R" secondAttribute="trailing" id="ZC6-kZ-Ua1"/>
+                                                <constraint firstItem="1ba-qf-Xv4" firstAttribute="leading" secondItem="kLp-bY-dIc" secondAttribute="leading" constant="8" id="ahy-UP-cXt"/>
+                                                <constraint firstItem="ZL8-dq-r3X" firstAttribute="top" secondItem="1ba-qf-Xv4" secondAttribute="bottom" constant="8" id="aie-Lt-wXy"/>
+                                                <constraint firstItem="Jxy-Uo-gqW" firstAttribute="trailing" secondItem="u5p-3m-u6R" secondAttribute="trailing" id="eet-FZ-51r"/>
+                                                <constraint firstAttribute="trailing" secondItem="kLp-bY-dIc" secondAttribute="trailing" id="iYH-tF-QaG"/>
+                                                <constraint firstItem="u5p-3m-u6R" firstAttribute="centerY" secondItem="1ba-qf-Xv4" secondAttribute="centerY" id="iiZ-v8-J7Q"/>
+                                                <constraint firstItem="kLp-bY-dIc" firstAttribute="leading" secondItem="cKd-5b-A42" secondAttribute="leading" id="iqG-57-KBU"/>
+                                                <constraint firstItem="Jxy-Uo-gqW" firstAttribute="leading" secondItem="ZL8-dq-r3X" secondAttribute="trailing" constant="8" id="kaE-E6-XKf"/>
+                                                <constraint firstItem="fn2-AP-xi1" firstAttribute="trailing" secondItem="u5p-3m-u6R" secondAttribute="trailing" id="laF-bD-7oe"/>
+                                                <constraint firstItem="w5d-nn-0fT" firstAttribute="top" secondItem="ZL8-dq-r3X" secondAttribute="bottom" constant="8" id="mra-BB-n6o"/>
+                                                <constraint firstAttribute="bottom" secondItem="fn2-AP-xi1" secondAttribute="bottom" constant="8" id="mzj-gs-I7q"/>
+                                                <constraint firstItem="fn2-AP-xi1" firstAttribute="leading" secondItem="1ba-qf-Xv4" secondAttribute="leading" id="tJ8-H9-VDv"/>
+                                                <constraint firstItem="u5p-3m-u6R" firstAttribute="trailing" secondItem="kLp-bY-dIc" secondAttribute="trailing" constant="-8" id="yuw-gg-ZYu"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="secondary"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cKd-5b-A42" secondAttribute="trailing" constant="8" id="KG1-BB-IN6"/>
+                                        <constraint firstItem="cKd-5b-A42" firstAttribute="top" secondItem="Qde-Gr-Nyt" secondAttribute="top" constant="8" id="Tsw-49-4F6"/>
+                                        <constraint firstItem="cKd-5b-A42" firstAttribute="leading" secondItem="Qde-Gr-Nyt" secondAttribute="leading" constant="8" id="a5Y-gq-vSK"/>
+                                        <constraint firstAttribute="bottom" secondItem="cKd-5b-A42" secondAttribute="bottom" constant="8" id="h0w-xS-g7d"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="imageViewPhoto" destination="kLp-bY-dIc" id="ERi-Yl-dh1"/>
+                                    <outlet property="labelCurrentPosition" destination="Jxy-Uo-gqW" id="mDE-PW-vte"/>
+                                    <outlet property="labelName" destination="1ba-qf-Xv4" id="j9M-eS-SR5"/>
+                                    <outlet property="labelParty" destination="u5p-3m-u6R" id="d5H-iE-OwJ"/>
+                                    <outlet property="textViewDescription" destination="w5d-nn-0fT" id="MWV-T3-Wpv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eoN-R4-uAb" id="aeW-uf-TIe"/>
+                            <outlet property="delegate" destination="eoN-R4-uAb" id="H2v-Cl-p6J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Vote Presidente" id="UTu-ZM-h4k">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aS6-0F-j9k"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mw-ZF-jaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="336.88155922038982"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="EwF-2x-NQp">
+            <objects>
+                <tableViewController id="08X-Qd-GQg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bAD-Im-skQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="YrF-7T-OCY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YrF-7T-OCY" id="u3r-fX-Efc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="08X-Qd-GQg" id="0me-CI-Xq7"/>
+                            <outlet property="delegate" destination="08X-Qd-GQg" id="T7o-I6-A9Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="mMT-Wx-4Oq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="r93-BT-4EX"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDh-Dt-yjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="1057"/>
+        </scene>
+        <!--Votação-->
+        <scene sceneID="Dgt-Pn-uQC">
+            <objects>
+                <navigationController id="qLY-4u-WGp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Votação" image="votes" id="nBf-8C-y7H" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="kZb-kB-eGS" id="mVM-nl-PzD"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NvJ-ki-A52">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="08X-Qd-GQg" kind="relationship" relationship="rootViewController" id="ovF-du-bhk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUi-Nt-DUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="kZb-kB-eGS" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="126" y="1057"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="01j-nx-EEh">
+            <objects>
+                <tabBarController id="kk6-OT-69w" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PE4-D1-9mC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="J0b-YY-4h9" kind="relationship" relationship="viewControllers" id="nmf-dx-sHt"/>
+                        <segue destination="qLY-4u-WGp" kind="relationship" relationship="viewControllers" id="Q66-pT-lln"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hr5-Ej-NR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="337"/>
+        </scene>
+        <!--Candidatos-->
+        <scene sceneID="hvQ-uM-coq">
+            <objects>
+                <navigationController id="J0b-YY-4h9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Candidatos" image="candidates" id="z0g-nk-NIN" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="zlq-hR-PSb" id="Xlj-51-PSI"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B3e-ma-ptO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eoN-R4-uAb" kind="relationship" relationship="rootViewController" id="l50-lR-TQf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tq-QQ-WHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="zlq-hR-PSb" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="126" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="candidates" width="25" height="25"/>
+        <image name="votes" width="25" height="25"/>
+    </resources>
 </document>

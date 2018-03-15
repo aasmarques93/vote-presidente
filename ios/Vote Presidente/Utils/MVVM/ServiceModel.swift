@@ -135,7 +135,6 @@ class ServiceModel {
         
         guard let parameters = parameters else {
             link += keyManagerFile(key: type)
-            link += appendApiKey(to: link)
             return link
         }
         
@@ -172,13 +171,7 @@ class ServiceModel {
             }
         }
         
-        url += appendApiKey(to: url)
-        
         return url
-    }
-    
-    func appendApiKey(to url: String) -> String {
-        return "api_key=\(keyManagerFile(key: RequestUrl.apiKey))"
     }
 }
 

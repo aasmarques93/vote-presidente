@@ -36,13 +36,8 @@ enum EnvironmentBase: String {
 
 // MARK: - Request Link Enum -
 enum RequestUrl: String {
-    case apiKey
-    case upcoming
-    case movie
-    case topRated
-    case popular
-    case searchMovie
-    case searchPerson
-    case searchByGenre
-    case genres
+    case candidates
+    case votes
+    case votesByState
+    case votesByCandidate
 }

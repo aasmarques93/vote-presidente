@@ -23,13 +23,13 @@ extension UINavigationController {
 
 extension UIViewController {
     open override func awakeFromNib() {
-        view.backgroundColor = HexColor.primary.color
+        view.backgroundColor = HexColor.background.color
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        imageView.image = #imageLiteral(resourceName: "logo-movie-db")
-        imageView.contentMode = .scaleAspectFit
-        
-        navigationItem.titleView = imageView
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//        imageView.image = #imageLiteral(resourceName: "logo-movie-db")
+//        imageView.contentMode = .scaleAspectFit
+//
+//        navigationItem.titleView = imageView
     }
 }
 
@@ -80,7 +80,7 @@ extension CAGradientLayer {
 
 extension UITabBarController {
     open override func awakeFromNib() {
-        tabBar.tintColor = HexColor.primary.color
+        tabBar.tintColor = HexColor.background.color
     }
 }
 
@@ -140,13 +140,13 @@ class Button: UIButton {
         
         if isPrimary {
             titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)
-            applyGradient(colors: [HexColor.secondary.color, HexColor.darkSecondary.color])
+            applyGradient(colors: [HexColor.primary.color, HexColor.secondary.color])
         } else if isSecondary {
             titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)
-            backgroundColor = HexColor.secondary.color
+            backgroundColor = HexColor.primary.color
         } else if isLink {
             titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
-            titleLabel?.textColor = HexColor.secondary.color
+            titleLabel?.textColor = HexColor.primary.color
             backgroundColor = UIColor.clear
             
             if let text = titleLabel?.text {
@@ -158,7 +158,7 @@ class Button: UIButton {
             }
         } else {
             titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
-            backgroundColor = HexColor.secondary.color
+            backgroundColor = HexColor.primary.color
         }
     }
 }
@@ -201,8 +201,8 @@ class TextField: UITextField, UITextFieldDelegate {
         didSet {
             titleLabel.text = messageError != "" ? messageError : title
             titleLabel.adjustsFontSizeToFitWidth = true
-            titleLabel.textColor = isInvalidField ? HexColor.secondary.color : titleColor ?? HexColor.text.color
-            separator.backgroundColor = isInvalidField ? HexColor.secondary.color : titleColor ?? HexColor.text.color
+            titleLabel.textColor = isInvalidField ? HexColor.primary.color : titleColor ?? HexColor.text.color
+            separator.backgroundColor = isInvalidField ? HexColor.primary.color : titleColor ?? HexColor.text.color
         }
     }
     

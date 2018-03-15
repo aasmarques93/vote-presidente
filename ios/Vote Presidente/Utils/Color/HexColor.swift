@@ -9,11 +9,11 @@
 import UIKit
 
 enum HexColor: String {
-    case primary = "081C24"
-    case secondary = "01D277"
-    case darkSecondary = "048051"
-    case accent = "F15F50"
-    case text = "F4F4F4"
+    case background = "FFFFFF"
+    case primary = "34693D"
+    case secondary = "F4F4F4"
+    case accent = "225896"
+    case text = "747580"
     
     var color : UIColor { 
         return UIColor(hexString: self.rawValue)
@@ -21,6 +21,15 @@ enum HexColor: String {
     
     var cgColor : CGColor {
         return color.cgColor
+    }
+    
+    static func color(from string: String?) -> UIColor? {
+        if string == "background" { return HexColor.background.color }
+        if string == "primary" { return HexColor.primary.color }
+        if string == "secondary" { return HexColor.secondary.color }
+        if string == "accent" { return HexColor.accent.color }
+        if string == "text" { return HexColor.text.color }
+        return nil
     }
 }
 

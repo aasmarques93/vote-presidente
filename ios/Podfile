@@ -10,6 +10,7 @@ target 'Vote Presidente' do
   pod 'Bond', '~> 6.0-beta'
   pod 'NVActivityIndicatorView', '~> 3.7.0'
   pod 'RAMAnimatedTabBarController'
+  pod 'Charts'
 
   target 'Vote PresidenteTests' do
     inherit! :search_paths
